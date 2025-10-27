@@ -28,8 +28,8 @@ export class HomePageComponent implements OnInit, OnChanges {
   // methods that are called at a specific point in time
   // It is very rare that there is an application that uses many life cycle hooks.
 
-  traditionalProperty = 'Fernando';
-  signalProperty = signal('Fernando');
+  traditionalProperty = 'Cristian';
+  signalProperty = signal('Cristian');
 
 
   // Constructor is called first
@@ -49,18 +49,18 @@ export class HomePageComponent implements OnInit, OnChanges {
 
   //
   changeTraditional() {
-    this.traditionalProperty = 'Fernando Herrera';
+    this.traditionalProperty = 'Cristian Sifuentes';
   }
 
   changeSignal() {
-    this.signalProperty.set('Fernando Herrera');
+    this.signalProperty.set('Cristian Sifuentes');
   }
 
   basicEffect = effect((onCleanup) => {
-    log('effect', 'Disparar efectos secundarios');
+      log('effect', 'Fire side effects');
 
     onCleanup(() => {
-      log('onCleanup', 'Se ejecuta cuando el efecto se va a destruir');
+        log('onCleanup', 'Runs when the effect is going to be destroyed');
     });
   });
 
