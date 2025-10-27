@@ -57,7 +57,7 @@ export class HomePageComponent implements OnInit, OnChanges {
   }
 
   basicEffect = effect((onCleanup) => {
-    log('effect', 'Disparar efectos secundarios');
+      log('effect', 'Fire side effects');
 
     onCleanup(() => {
       log('onCleanup', 'Se ejecuta cuando el efecto se va a destruir');
